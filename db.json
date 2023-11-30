@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Lorem ipsum dolor 1",
+      "subtitle": "April 24, 2022 - 5 min read",
+      "description": "Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
+    },
+    {
+      "id": 2,
+      "title": "Lorem ipsum dolor 2",
+      "subtitle": "April 03, 2022 - 4 min read",
+      "description": "Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
+    },
+    {
+      "id": 3,
+      "title": "Lorem ipsum dolor 3",
+      "subtitle": "March 12, 2022 - 6 min read",
+      "description": "Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
+    },
+    {
+      "id": 4,
+      "title": "Lorem ipsum dolor 4",
+      "subtitle": "April 24, 2022 - 5 min read",
+      "description": "Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
+    },
+    {
+      "title": null,
+      "subtitle": "test subtitle",
+      "description": "test description",
+      "id": 5
+    },
+    {
+      "id": 6,
+      "title": "Lorem ipsum dolor 6",
+      "subtitle": "March 12, 2022 - 6 min read",
+      "description": "Nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
+    },
+    {
+      "title": "12121212",
+      "subtitle": "test subtitle",
+      "description": "test description",
+      "id": 7
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

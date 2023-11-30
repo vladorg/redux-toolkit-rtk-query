@@ -1,0 +1,96 @@
+.header
+  padding: 6px 0
+  +xs
+    padding: 20px 0
+
+  &__wrap
+    padding: 10px 0
+    +flex(0,0,space-between,center)
+  
+  
+.logo
+  a
+    background: -webkit-linear-gradient(270deg, $c_primary_gradient)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    +text(15,700,$lh,0)
+    +flex(0,0,flex-start,center)
+    +hover
+      +xxs
+        background: $transparent
+        -webkit-text-fill-color: $c_link
+    +xxs
+      +text(20,700,$lh,0)
+    +xs
+      +text(30,700,$lh,0)
+
+.navigation
+  position: fixed
+  top: 0
+  left: 0
+  width: calc(100% - 4% - 18px - 4%)
+  height: 100%
+  background: $c_body
+  z-index: 1010
+  opacity: 0
+  pointer-events: none
+  transform: translateX(-100%)
+  transition: opacity .2s .2s, transform .2s
+  +xs
+    position: static
+    width: auto
+    background: $transparent
+    z-index: 1
+    opacity: 1
+    transform: none
+    pointer-events: auto
+
+  ul
+    opacity: 0
+    padding: 20px
+    +xs
+      opacity: 1
+      padding: 0
+      +flex(0,0,space-between,center)
+    li
+      +not_first
+        margin-top: 24px
+        +xs
+          margin-left: 16px
+          margin-top: 0
+        +sm
+          margin-left: 40px
+      a
+        display: block
+        font-size: 16px
+        +text(18,700,0,0)        
+        +xs
+          padding: 10px
+          max-width: 155px
+          font-size: 24px
+
+
+      &:nth-child(1n + 4)
+        +xs
+          display: none
+        +sm
+          display: block
+      &:nth-child(1n + 5)
+        +sm
+          display: none
+        +md
+          display: block
+      &:nth-child(1n + 6)
+        +md
+          display: none
+          
+  &.opened
+    opacity: 1
+    transform: none
+    pointer-events: auto
+    transition: transform .3s .5s
+
+    ul
+      opacity: 1
+      +tran(opacity, .2s .8s)
+    

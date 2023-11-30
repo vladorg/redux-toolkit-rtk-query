@@ -1,0 +1,65 @@
+.input
+  padding: 12px
+  border: 1px solid transparent
+  resize: none
+  width: 100%
+  background: $c_secondary
+  border-radius: 30px
+  +text(14,400,0,$c_default)
+  +tran(all,.2s)
+  +xxs
+    font-size: 14px
+    padding: 16px
+  +xs
+    padding: 22px 22px 22px 42px
+    font-size: 20px
+  &::-webkit-input-placeholder
+    color: $c_text
+    font-family: $ff
+  &::-moz-placeholder
+    color: $c_text
+    font-family: $ff
+  &:-moz-placeholder
+    color: $c_text
+    font-family: $ff
+  &:-ms-input-placeholder
+    color: $c_text
+    font-family: $ff
+  
+  &:-internal-autofill-selected
+    //background: $c_secondary
+
+  
+  &--err
+    border-color: red!important
+    animation: input_error .1s linear 0s 2
+  
+  &--ok
+    border-color: green
+
+
+
+.field
+  &--two
+    display: block
+    input, 
+    textarea
+      +not_last
+        margin-bottom: 16px
+    +xxs
+      display: grid
+      grid-template-columns: repeat(2,1fr)
+      grid-gap: 24px
+      
+  &--three
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    grid-gap: 8px
+
+@keyframes input_error
+  0%
+    transform: translateX(5px)
+  50%
+    transform: translateX(-5px)
+  100%
+    transform: translateX(0)
